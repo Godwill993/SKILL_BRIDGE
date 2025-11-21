@@ -1,0 +1,38 @@
+.info-card {
+  background:  #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: #F4CA16;
+  max-width: 300px;
+  margin: 1rem;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+  color: #0a1f44;
+  margin-bottom: 1rem;
+}
+
+.info-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.info-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .info-card {
+    max-width: 98%;
+  }
+}
