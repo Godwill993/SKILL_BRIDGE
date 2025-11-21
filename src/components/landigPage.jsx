@@ -13,7 +13,9 @@ const LandingPage = () => {
           Bridging the gap between education and employment through innovation,
           collaboration, and opportunity.
         </p>
-        <button className="landing-btn">start </button>
+        
+        <Link to="/form"><button className="landing-btn">start </button>
+        </Link>
          
       </div>
 
