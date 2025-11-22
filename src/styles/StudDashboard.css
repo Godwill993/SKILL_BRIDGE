@@ -1,0 +1,23 @@
+.dashboard-container {
+  display: flex;
+}
+
+.dashboard-content {
+  margin-left: 240px; /* space for sidebar */
+  padding: 20px;
+  width: 100%;
+}
+
+.overview {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.companies {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

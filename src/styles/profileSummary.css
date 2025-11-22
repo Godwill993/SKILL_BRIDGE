@@ -1,0 +1,18 @@
+.profile-summary {
+  margin-top: 25px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 5px #00000018;
+}
+
+.profile-summary h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.profile-summary p {
+  color: #555;
+  font-size: 14px;
+}

@@ -1,0 +1,18 @@
+.company-card {
+  width: 220px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 5px #00000022;
+}
+
+.company-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.company-card p {
+  color: #555;
+  font-size: 14px;
+}
