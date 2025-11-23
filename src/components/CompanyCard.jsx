@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBuilding } from "react-icons/fa";
-import "./CompanyCard.css";
+import "../styles/companyCard.css";
 
 const CompanyCard = ({ name, field }) => {
   return (

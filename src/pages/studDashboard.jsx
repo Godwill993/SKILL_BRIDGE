@@ -7,7 +7,7 @@ import CompanyCard from "../components/CompanyCard";
 import ProfileSummary from "../components/ProfileSummary";
 
 import { FaBook, FaBuilding, FaLaptopCode } from "react-icons/fa";
-import "./StudDashboard.css";
+import "../styles/StudDashboard.css";
 
 const StudDashboard = () => {
   return (

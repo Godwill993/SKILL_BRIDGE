@@ -1,6 +1,6 @@
 import React from "react";
 import { MdWork } from "react-icons/md";
-import "./InternshipList.css";
+import "../styles/internshipList.css";
 
 const InternshipList = () => {
   const internships = [

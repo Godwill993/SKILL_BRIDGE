@@ -50,3 +50,26 @@
 .logout:hover {
   background: #c0392b;
 }
+.menu-icon {
+  width: 20px;
+  height: 20px;
+}
+.menu-text {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+  .logo {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .menu li {
+    padding: 10px 8px;
+  }
+  .menu-text {
+    font-size: 14px;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import  "../styles/form.css";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -62,10 +63,13 @@ const Form = () => {
             required
           />
         </div>
-
-        <button type="submit" className="submit-btn">
+        <Link to="/student">
+                <button type="submit" className="submit-btn">
           Sign Up
         </button>
+        </Link>
+
+        
 
         <div className="divider">
           <span>OR</span>

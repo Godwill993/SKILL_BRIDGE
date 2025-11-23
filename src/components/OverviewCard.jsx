@@ -1,5 +1,5 @@
 import React from "react";
-import "./OverviewCard.css";
+import "../styles/overviewCard.css";
 
 const OverviewCard = ({ title, value, Icon }) => {
   return (

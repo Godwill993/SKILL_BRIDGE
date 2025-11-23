@@ -1,6 +1,6 @@
 import React from "react";
 import { IoPersonCircleSharp } from "react-icons/io5";
-import "./ProfileSummary.css";
+import "../styles/profileSummary.css";
 
 const ProfileSummary = () => {
   return (

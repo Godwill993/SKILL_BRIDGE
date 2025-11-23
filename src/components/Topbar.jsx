@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineBell, AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import "./Topbar.css";
+import "../styles/Topbar.css";
 
 const Topbar = () => {
   return (
