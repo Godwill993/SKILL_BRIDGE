@@ -1,0 +1,12 @@
+.posts-section { display:flex; flex-direction:column; gap:12px; }
+.post-card {
+  border-radius:12px;
+  padding:14px;
+  background:var(--white);
+  box-shadow: var(--card-shadow);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.post-meta { display:flex; gap:10px; align-items:center; }
+.post-avatar { width:44px; height:44px; border-radius:50%; overflow:hidden; }

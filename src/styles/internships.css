@@ -1,0 +1,23 @@
+.internship-section { display:flex; flex-direction:column; gap:12px; }
+.internship-carousel {
+  display:flex;
+  gap:14px;
+  padding:10px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior:smooth;
+  cursor:grab;
+}
+.internship-carousel:active { cursor:grabbing; }
+.internship-card {
+  min-width:260px;
+  border-radius:12px;
+  background:var(--white);
+  box-shadow: var(--card-shadow);
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.internship-card img { width:100%; height:140px; object-fit:cover; border-radius:8px; }
+.internship-meta { display:flex; justify-content:space-between; align-items:center; gap:8px; }

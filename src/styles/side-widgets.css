@@ -1,0 +1,7 @@
+.widget { background:var(--white); border-radius:12px; padding:12px; box-shadow: var(--card-shadow); }
+.widget h4 { margin-bottom:8px; color:var(--muted); font-size:13px; }
+.follower-item { display:flex; gap:10px; align-items:center; padding:8px 0; border-bottom:1px solid #f1f5f9; }
+.follower-item:last-child{ border-bottom:0; }
+.company-item { display:flex; gap:12px; align-items:center; padding:8px 0; }
+.school-badge { display:flex; gap:12px; align-items:center; }
+.school-badge img { width:48px; height:48px; border-radius:8px; object-fit:cover; }

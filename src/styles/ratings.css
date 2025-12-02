@@ -1,0 +1,24 @@
+.ratings-wrapper { display:flex; gap:14px; flex-wrap:wrap; }
+.rating-card {
+  flex:1 1 220px;
+  min-width:230px;
+  background: linear-gradient(180deg, #fff, #fff);
+  border-radius:12px;
+  padding:16px;
+  box-shadow: var(--card-shadow);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.rating-value {
+  font-size:22px;
+  font-weight:700;
+  color:var(--blue);
+}
+.progress {
+  height:8px;
+  background:#eef2ff;
+  border-radius:999px;
+  overflow:hidden;
+}
+.progress > i { display:block; height:100%; background: linear-gradient(90deg, var(--blue), var(--yellow)); width:60%; }

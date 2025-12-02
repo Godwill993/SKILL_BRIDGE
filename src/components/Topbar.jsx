@@ -1,21 +1,27 @@
 import React from "react";
-import { AiOutlineBell, AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import "../styles/Topbar.css";
+import "../styles/topbar.css";
+import { FiBell, FiSearch } from "react-icons/fi";
 
-const Topbar = () => {
+export default function Topbar({ onToggleSidebar }) {
   return (
-    <div className="topbar">
-      <div className="search">
-        <AiOutlineSearch />
-        <input type="text" placeholder="Search..." />
+    <header className="topbar">
+      <div className="topbar-left">
+        {/* optional sidebar toggle for mobile */}
+        <button className="icon-btn" onClick={onToggleSidebar} aria-label="Toggle menu" style={{display:"none"}}>☰</button>
+
+        <div className="search-input">
+          <FiSearch />
+          <input aria-label="Search" placeholder="Search internships, posts, people..." />
+          <button className="search-btn">Search</button>
+        </div>
       </div>
 
-      <div className="top-icons">
-        <AiOutlineBell />
-        <AiOutlineUser />
+      <div className="topbar-right">
+        <button className="icon-btn" aria-label="Notifications"><FiBell /></button>
+        <div className="profile-pic">
+          <img src="/assets/avatar.png" alt="me" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+        </div>
       </div>
-    </div>
+    </header>
   );
-};
-
-export default Topbar;
+}
