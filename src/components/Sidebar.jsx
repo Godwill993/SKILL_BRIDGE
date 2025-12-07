@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/sidebar.css";
 import { FaBook, FaBuilding, FaFolderOpen, FaSignOutAlt, FaBars } from "react-icons/fa";
+import  ProfilePic from "../assets/PXL_20250227_092646636.jpg"
 
 export default function Sidebar({ collapsed, onToggle }) {
   return (
@@ -11,7 +12,7 @@ export default function Sidebar({ collapsed, onToggle }) {
         </button>
         {!collapsed && (
           <div className="brand">
-            <img src="/assets/avatar.png" alt="logo" style={{ width: 44, height: 44, borderRadius: 8, objectFit: "cover" }} />
+            <img src={ProfilePic} alt="logo" style={{ width: 44, height: 44, borderRadius: 8, objectFit: "cover" }} />
             <h1>StudentHub</h1>
           </div>
         )}

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/topbar.css";
 import { FiBell, FiSearch } from "react-icons/fi";
-
+import  ProfilePic from "../assets/PXL_20250227_092646636.jpg"
 export default function Topbar({ onToggleSidebar }) {
   return (
     <header className="topbar">
@@ -19,7 +19,7 @@ export default function Topbar({ onToggleSidebar }) {
       <div className="topbar-right">
         <button className="icon-btn" aria-label="Notifications"><FiBell /></button>
         <div className="profile-pic">
-          <img src="/assets/avatar.png" alt="me" style={{width:"100%",height:"100%",objectFit:"cover"}} />
+          <img src={ProfilePic} alt="me" style={{width:"100%",height:"100%",objectFit:"cover"}} />
         </div>
       </div>
     </header>

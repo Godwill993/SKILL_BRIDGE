@@ -1,28 +1,21 @@
 import React, { useState } from "react";
-import  "../styles/form.css";
+import "../styles/form.css";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { auth } from "../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const signIn = () => {  };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    alert("Form submitted successfully!");
-  };
+   
+ 
 
   return (
     <div className="signup-container">
-      <form className="signup-form" onSubmit={handleSubmit}>
+      <form className="signup-form">
         <h2>Create Your Account</h2>
 
         <div className="form-group">
@@ -32,8 +25,6 @@ const Form = () => {
             id="name"
             name="name"
             placeholder="Enter your full name"
-            value={formData.name}
-            onChange={handleChange}
             required
           />
         </div>
@@ -45,9 +36,8 @@ const Form = () => {
             id="email"
             name="email"
             placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
             required
+            onChange={(e)=>setEmail (e.target.value)}
           />
         </div>
 
@@ -58,18 +48,15 @@ const Form = () => {
             id="password"
             name="password"
             placeholder="Enter a secure password"
-            value={formData.password}
-            onChange={handleChange}
             required
+                onChange={(e)=>setPassword(e.target.value)}
           />
         </div>
         <Link to="/student">
-                <button type="submit" className="submit-btn">
-          Sign Up
-        </button>
+          <button type="submit" className="submit-btn">
+            Sign Up
+          </button>
         </Link>
-
-        
 
         <div className="divider">
           <span>OR</span>
