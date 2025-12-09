@@ -3,8 +3,12 @@ import "../styles/form.css";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import {GoogleAuthProvider} from "firebase/auth";
+import { 
+  createUserWithEmailAndPassword, 
+  GoogleAuthProvider, 
+  FacebookAuthProvider, 
+  signInWithPopup 
+} from "firebase/auth";
 
 const Form = () => {
   const navigate = useNavigate();
@@ -14,6 +18,7 @@ const Form = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // SIGN UP WITH EMAIL + PASSWORD
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -27,12 +32,36 @@ const Form = () => {
 
     try {
       await createUserWithEmailAndPassword(auth, email.trim(), password);
-      navigate("/student");  
+      navigate("/student");
     } catch (err) {
       setError(err?.message || "Failed to create account.");
     }
 
     setLoading(false);
+  };
+
+  // GOOGLE SIGN-IN
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/student");
+    } catch (err) {
+      setError(err?.message || "Google login failed.");
+    }
+  };
+
+  // FACEBOOK SIGN-IN
+  const handleFacebookLogin = async () => {
+    const provider = new FacebookAuthProvider();
+
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/student");
+    } catch (err) {
+      setError(err?.message || "Facebook login failed.");
+    }
   };
 
   return (
@@ -76,18 +105,21 @@ const Form = () => {
         <div className="divider"><span>OR</span></div>
 
         <div className="social-buttons">
-          <button type="button" className="google-btn">
+          <button 
+            type="button" 
+            className="google-btn"
+            onClick={handleGoogleLogin}
+          >
             <FaGoogle /> Continue with Google
           </button>
-          <button type="button" className="github-btn">
+
+          <button 
+            type="button" 
+            className="github-btn"
+            onClick={handleFacebookLogin}
+          >
             <FaFacebook /> Continue with Facebook
           </button>
-
-
-
-
-
-
         </div>
       </form>
     </div>
