@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/form.css";
-import { FaGoogle, FaGithub } from "react-icons/fa";
+import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -82,6 +82,12 @@ const Form = () => {
           <button type="button" className="github-btn">
             <FaFacebook /> Continue with Facebook
           </button>
+
+
+
+
+
+
         </div>
       </form>
     </div>
