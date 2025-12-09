@@ -24,7 +24,7 @@
   border-bottom-right-radius: 10px;
 }
 .nav-links {
-  display: flex;git 
+  display: flex;
   gap: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
