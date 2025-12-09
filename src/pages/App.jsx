@@ -5,6 +5,8 @@ import { Routes, Route} from "react-router-dom";
 import Form  from "./form.jsx";
 import  LandingPage  from "../components/landigPage.jsx";
 import StudDashboard from "../pages/studDashboard.jsx";
+import UserTypeSelection from "../pages/userSelection.jsx";
+
 function App() {
 
   return (
@@ -13,6 +15,7 @@ function App() {
      <Route path="/" element={<Welcome/>} />
      <Route path="/form" element={<Form/>} />  
      <Route path= "/student" element={<StudDashboard/>} />
+      <Route path="/userType" element={<UserTypeSelection />} />
    </Routes>
   
 

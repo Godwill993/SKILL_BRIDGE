@@ -14,7 +14,7 @@ const LandingPage = () => {
           collaboration, and opportunity.
         </p>
         
-        <Link to="/form"><button className="landing-btn">start </button>
+        <Link to="/userType"><button className="landing-btn">start </button>
         </Link>
          
       </div>
